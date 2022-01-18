@@ -1,0 +1,27 @@
+{
+  "age": 15,
+  "birthPlace": "",
+  "email": "string",
+  "gender": "erkek",
+  "password": "su",
+  "username": "25karakterdenfazlagirişyapıldı",
+  "price": 12.2545,
+  "workYear": 32,
+  "phoneNumber": "+90538694540",
+  "date": "2023-01-18T12:25:01.983Z"
+}
+
+Bu şekilde bir post request sonucunda aşağıdaki gibi bir responce dönüyor.
+
+{
+  "date"       : "Lütfen geçerli bir zaman değeri giriniz!",
+  "birthPlace" : "Bu alanı boş bırakamazsınız!",
+  "password"   : "Şifre 5 ve 25 arasında uzunluğa sahip olmalıdır!",
+  "phoneNumber": "Lütfen alan koduyla birlikte telefon numaranızı giriniz!",
+  "gender"     : "min:1 ile max:1 karakterden fazla giriş yapamazsınız!",
+  "price"      : "Tam kısım için max 4 karakter, vigülden sonra için max 2 karakter kullanınız!",
+  "workYear"   : "Range(10,25) arasında seçim yapınız!",
+  "age"        : "18 yaş altındaki kullanıcılarımız sisteme dahil edilmemektedir.",
+  "email"      : "Geçersiz bir email girdiniz!",
+  "username"   : "25 karakterden fazla giremezsiniz!"
+}
