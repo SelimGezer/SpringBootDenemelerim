@@ -52,7 +52,9 @@ Methodu inceleyecek olursak
 
 > ### Custom Validation Oluşturmak
 >Kendi validayonlarımızı oluşturmadan önce herhangi bir validasyon anotasyonunun üzerine gelip incelediğimizde aşağıdaki yapıyla karşılaşırız.
-![javax](C:/Users/Selim Gezer/Desktop/validation.png)
+>
+![validation](https://user-images.githubusercontent.com/72503092/149984073-529273d4-2db1-4112-9db3-62dc4b0d5d79.png)
+
 * Yapıyı incelediğimizde **@Documented** dışında 4 anotasyon bizi karşılar bunlar;
    >  * **Constraint()** : Bu kısım ilgili anotasyonun hangi sınıf tarafından valid edileceğini temsil eder.
    >  * **Target()**     : Bu kısım ilgili anotasyonun hangi seviyelerde kullanılabileceğini temsil eder. Örneğin: **ElementType.METHOD** bu anotasyonun method düzeyine kullanılabileceğini temsil ederken, **ElementType.FIELD** bu anotasyonun alan bazında kullanılabileceğini ifade eder. Bunlardan birkaçı birlikte kullanılabilir.
