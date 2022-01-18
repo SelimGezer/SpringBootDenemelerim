@@ -1,14 +1,15 @@
 # Validation
 > ### Javax.Validation tarafından sağlanan anotasyonlar
->![javax](C:/Users/Selim Gezer/Desktop/javax.png)
+>![javax](https://user-images.githubusercontent.com/72503092/149967797-2b4c0861-ac48-4f22-8d96-471436fb7881.png)
+
 
 <!--<img  src=![javax](C:/Users/Selim Gezer/Desktop/javax.png) width="10" height="10"></img>--> 
 
 > ### Hibernate.validator tarafından sağlanan anotasyonlar
+>![hiber](https://user-images.githubusercontent.com/72503092/149967922-f4aebfb2-3a48-4d63-88bd-d1c8250aad65.png)
 
-![hibernate](C:/Users/Selim Gezer/Desktop/hiber.png)
 
- > ###Sık Kullanılan Anotasyonlar
+> ### Sık Kullanılan Anotasyonlar
 * Anotasyonların hepsinde **message** değerini vererek geçerli validasyon şartlarına uyulmadığında ne mesaj vermesi gerektiğini söyleyebilirsiniz.
 * Anotasyonların bütün değerleri verilmek zorunda değildir. Sadece kontrol edilmesi istenen duruma uygun parametreye değer kısmı verilebilir.
 
@@ -21,7 +22,7 @@
   * **@Digit(integer,fration)** : Girilen değerin tam kısmının maximum integer haneli, hassasiyetini(virgülden sonraki kısmı) ise maximum fraction kadar olup olmadığını kontrol eder.
   * **@Past()** : Belirtilen tarih değerinin geçmiş zaman olup olmadığını kontrol eder. Yine bunun diğer variantları için @PastOrPresent, @Future, @FutureOrPresent anotasyonları kullanılabilir.
 
-> ###Validasyon işlemleri sonucunda oluşan hataları görmek için
+> ### Validasyon işlemleri sonucunda oluşan hataları görmek için
 ``` 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -49,7 +50,7 @@ Methodu inceleyecek olursak
 * Methodun içerisinde ise bir map yardımıyla tüm oluşan validasyon hataları toplanmış ve geri dönülmüştür.
   * **error.getField()** hangi alanda hata olduğunu, **error.getDefaultMessage()** ise anostasyonları eklerken **message** parametresine ne geçtiğimizi temsil eder.
 
-> ###Custom Validation Oluşturmak
+> ### Custom Validation Oluşturmak
 >Kendi validayonlarımızı oluşturmadan önce herhangi bir validasyon anotasyonunun üzerine gelip incelediğimizde aşağıdaki yapıyla karşılaşırız.
 ![javax](C:/Users/Selim Gezer/Desktop/validation.png)
 * Yapıyı incelediğimizde **@Documented** dışında 4 anotasyon bizi karşılar bunlar;
@@ -66,7 +67,7 @@ Methodu inceleyecek olursak
   > Zorunlu olan methodları custom validasyon yazarken tanımlamazsak **javax.validation.ConstraintDefinitionException** alırız.
    
 
-###Örnek: (Projenin CustomValidation paketinin altında bulabilirsiniz.)
+### Örnek: (Projenin CustomValidation paketinin altında bulabilirsiniz.)
 Bir örnek üzerinden kendi custom validasyon anotasyonumuzu oluşturalım : Bir telefon numarası validasyonu yapacağımızı düşünelim.
 * İlk olarak **@interface** tanımlı bir birim oluşturalım. Burada belirttiğimiz isim anotasyonumuzun ismi olacaktır(PhoneNumber)
 ```
